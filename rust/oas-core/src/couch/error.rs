@@ -20,6 +20,8 @@ pub enum CouchError {
     Other(String),
     #[error("{0}")]
     MissingRefs(#[from] MissingRefsError),
+    #[error("Not found")]
+    NotFound,
 }
 
 impl CouchError {
